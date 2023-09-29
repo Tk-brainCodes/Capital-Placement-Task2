@@ -80,7 +80,7 @@ const LayoutBody = () => {
       <ContentWrapper />
       <Footer
         style={{ position: "fixed", background: "none" }}
-        className='flex items-end justify-end ml-[60em] relative bottom-0 z-40'
+        className='flex lg:items-end lg:justify-end justify-center items-center lg:ml-[60em] relative bottom-0 z-40'
       >
         <Row gutter={8} align='middle' justify='start'>
           <Col>
