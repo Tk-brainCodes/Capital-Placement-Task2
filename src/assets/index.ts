@@ -1,0 +1,22 @@
+export { default as Home } from "./icons/home.svg";
+export { default as Date } from "./icons/date.svg";
+export { default as Form } from "./icons/form.svg";
+export { default as Like } from "./icons/like.svg";
+export { default as People } from "./icons/people.svg";
+export { default as Share } from "./icons/share.svg";
+export { default as Close } from "./icons/close.svg";
+export { default as Settings } from "./icons/settings.svg";
+export { default as DropdownArrow } from "./icons/arrowDropdown.svg";
+
+export { default as Tag } from "./icons/tag.svg";
+export { default as CancelUser } from "./icons/cancel.svg";
+export { default as AcceptUser } from "./icons/approve.svg";
+export { default as Chat } from "./icons/chat.svg";
+export { default as Mail } from "./icons/mail.svg";
+export { default as DropdownWhite } from "./icons/dropdownWhite.svg";
+export { default as Search } from "./icons/search.svg";
+export { default as Danger } from "./icons/danger.svg";
+export { default as ArrowSmall } from "./icons/arrowSmall.svg";
+export { default as File } from "./icons/file.svg";
+export { default as Player } from "./icons/Play-Circle.png";
+export { default as Book } from "./icons/bookOpen.svg";
