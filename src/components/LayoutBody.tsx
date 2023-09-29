@@ -41,7 +41,7 @@ const LayoutBody = () => {
 
   return (
     <Layout
-      className='h-auto site-layout w-[90vw] flex flex-col items-center justify-center max-md:px-[1em] max-sm:px-[1em] lg:px-[4em] py-2 lg:ml-[4.5em] max-sm:ml-[2em] max-md:ml-[2em]'
+      className='h-auto site-layout w-[90vw] flex flex-col items-center justify-center lg:px-[4em] py-2 lg:ml-[4.5em] max-sm:ml-[2em] max-md:ml-[2em]'
       style={{ background: "#F9FAFF" }}
     >
       <Header

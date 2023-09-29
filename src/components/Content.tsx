@@ -50,7 +50,7 @@ const menuAdvancedFilter = (
 const ContentWrapper = () => {
   return (
     <Content className='bg-[#F9FAFF] w-[90vw]'>
-      <div className='px-4 py-4 w-full flex max-sm:flex-wrap max-md:flex-wrap gap-6'>
+      <div className='lg:px-4 py-4 w-full flex max-sm:flex-wrap max-md:flex-wrap gap-6'>
         <div
           className='h-auto w-[385px]'
           style={{
@@ -142,7 +142,10 @@ const ContentWrapper = () => {
               247 Candidates
             </span>
             <section className='ml-[3em]'>
-              <Space align='center'>
+              <Space
+                className='items-center justify-center max-md:flex-nowrap'
+                align='center'
+              >
                 <div className='justify-start items-start gap-2 flex'>
                   <Text
                     className='font-Poppings font-medium text-[14px] text-[#1D4ED8]'
@@ -158,7 +161,7 @@ const ContentWrapper = () => {
                   </Text>
                   <div
                     style={{ padding: "1px 6px" }}
-                    className='px-1.5 py-px bg-[#F7F8FD] rounded-[40px] flex-col justify-start items-start gap-2.5 inline-flex'
+                    className='px-1.5 py-px bg-[#F7F8FD] rounded-[40px] flex-col items-center justify-center mt-[2px] gap-2.5 flex'
                   >
                     <Text style={{ fontSize: "10px" }}>25</Text>
                   </div>
@@ -170,7 +173,7 @@ const ContentWrapper = () => {
                   </Text>
                   <div
                     style={{ padding: "1px 6px" }}
-                    className='px-1.5 py-px bg-[#F7F8FD] rounded-[40px] flex-col justify-start items-start gap-2.5 inline-flex'
+                    className='px-1.5 mt-[2px] py-px bg-[#F7F8FD] items-center justify-center rounded-[40px] flex-col   gap-2.5 flex'
                   >
                     <Text style={{ fontSize: "10px" }}>78</Text>
                   </div>

@@ -8,10 +8,10 @@ const CheckboxCard = () => {
   };
 
   return (
-    <Card className='w-auto h-auto p-4 bg-white'>
+    <Card className='w-auto h-auto lg:p-4 bg-white'>
       <section className=' w-full  -ml-[2em] h-auto'>
         {card_data.map(({ name, city, bachelor, candidate, tags }) => (
-          <div className='flex items-center w-[56.3vw] gap-4 px-4 py-4 h-auto border-b border-slate-200'>
+          <div className='flex items-center max-md:w-full max-sm:w-full lg:w-[56.3vw] gap-4 px-4 py-4 h-auto border-b border-slate-200'>
             <Space className='flex gap-8'>
               <Checkbox className='w-4 h-4' onChange={onChange} />
 
