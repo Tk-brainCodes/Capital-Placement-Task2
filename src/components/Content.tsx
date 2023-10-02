@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   Layout,
   Menu,
@@ -11,11 +12,12 @@ import { Danger, Search } from "../assets";
 import type { CheckboxChangeEvent } from "antd/es/checkbox";
 import CheckboxCard from "./CheckboxCard";
 import { ArrowSmall, File } from "../assets";
+import { SearchContext } from "../context/search-context";
 
 const { Content, Header } = Layout;
 const { Text } = Typography;
 
-const onChange = (e: CheckboxChangeEvent) => {
+const onChangeCheckbox = (e: CheckboxChangeEvent) => {
   console.log(`checked = ${e.target.checked}`);
 };
 
@@ -48,6 +50,10 @@ const menuAdvancedFilter = (
 );
 
 const ContentWrapper = () => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  const { query, onChange } = useContext(SearchContext);
+
   return (
     <Content className='bg-[#F9FAFF] w-[90vw]'>
       <div className='lg:px-4 py-4 w-full flex max-sm:flex-wrap max-md:flex-wrap gap-6'>
@@ -64,6 +70,8 @@ const ContentWrapper = () => {
               prefix={<img src={Search} className='w-[20px] h-[20px]' />}
               placeholder='Search by name, edu, exp or #tag'
               className='border-none font-normal outline-none text-[14px] text-[#9AA6AC] font-Poppins'
+              value={query}
+              onChange={onChange}
             />
             <span className='cursor-pointer'>
               <img src={Danger} alt='danger' className='w-[20px] h-[20px]' />
@@ -138,7 +146,7 @@ const ContentWrapper = () => {
             className='w-full h-auto flex items-center justify-between max-md:flex-wrap max-sm:flex-wrap'
           >
             <span className='font-Poppins -ml-[2em] flex items-center gap-6 font-semibold text-[#1D4ED8] text-[14px]'>
-              <Checkbox className='w-4 h-4' onChange={onChange} />
+              <Checkbox className='w-4 h-4' onChange={onChangeCheckbox} />
               247 Candidates
             </span>
             <section className='ml-[3em]'>

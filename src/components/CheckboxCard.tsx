@@ -1,17 +1,31 @@
+import { useContext } from "react";
 import { Card, Tag, Avatar, Checkbox, Space } from "antd";
 import type { CheckboxChangeEvent } from "antd/es/checkbox";
 import { card_data } from "../data/card-data";
-
+import { SearchContext } from "../context/search-context";
 const CheckboxCard = () => {
   const onChange = (e: CheckboxChangeEvent) => {
     console.log(`checked = ${e.target.checked}`);
   };
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  const { query } = useContext(SearchContext);
+
+  const filteredData = card_data.filter(({ name, city, bachelor }) => {
+    const lowerCaseQuery = query.toLowerCase();
+    return (
+      name.toLowerCase().includes(lowerCaseQuery) ||
+      city.toLowerCase().includes(lowerCaseQuery) ||
+      bachelor.toLowerCase().includes(lowerCaseQuery)
+    );
+  });
+
   return (
     <Card className='w-auto h-auto lg:p-4 bg-white'>
       <section className=' w-full  -ml-[2em] h-auto'>
-        {card_data.map(({ name, city, bachelor, candidate, tags }) => (
-          <div className='flex items-center max-md:w-full max-sm:w-full lg:w-[56.3vw] gap-4 px-4 py-4 h-auto border-b border-slate-200'>
+        {filteredData.map(({ name, city, bachelor, candidate, tags }) => (
+          <div className='flex items-center max-md:w-full max-sm:w-full lg:w-full gap-4 px-4 py-4 h-auto border-b border-slate-200'>
             <Space className='flex gap-8'>
               <Checkbox className='w-4 h-4' onChange={onChange} />
 
